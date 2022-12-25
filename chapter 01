@@ -1,0 +1,79 @@
+1. What is Emmet
+    
+    Emmet is a code editor plugin that allows us to write HTML & CSS faster. By default, it is available in the Visual Studio Code.  
+    
+     In the below example, by using **! + TAB** we have generated a HTML boilerplate using Emmet.
+
+
+2. Difference between a Library and Framework?
+
+    Library                                                                                
+        - Library is a collection of functionalities that we can use in our code to achieve results and provides a way for developers to perform those tasks without having to write all of the code from scratch.
+
+        - React is a JavaScript library for building user interfaces. 
+
+        - It does not provide a lot of the functionality needed to build a complete web application, such as routing, form validation, and state management. As a result, it is often used in combination with other libraries or frameworks to build complete web applications.
+
+        - React is a declarative library, meaning that it allows developers to describe the UI and how it should behave, and the library takes care of rendering the UI and keeping it up to date
+
+        - With a library, developers have more control over how they use the code, and can use it in a variety of different ways.
+
+    Framework
+        - A Framework is a set of tools and conventions for building and organizing code. A framework provides a structure for the code that developers write, and enforces certain conventions and rules for how that code should be organized and structured.
+
+        - Angular is a complete end-to-end framework that provides all of the tools and functionality needed to build a complete web application.
+
+        - It includes a powerful templating system, a dependency injection system, and a lot of other features that make it a full-fledged framework.
+
+        - s an imperative framework, which means that developers have to write code that explicitly tells the framework how to manipulate the DOM to achieve the desired UI.
+
+        - With a framework, developers have less control, and must follow the conventions and structure set forth by the framework in order to use it effectively.
+
+
+3. What is CDN? Why do we use it?
+    A content delivery network (CDN) is a system of distributed servers that deliver web content , such as images, JavaScript files, and CSS stylesheets, as well as dynamic content, such as HTML pages and APIs  from a server that is closer to the user, CDNs can reduce the latency and improve the performance of websites and web applications.
+
+4. Why is React known as React ?
+    React is a JavaScript library for building interactive user interfaces. It is an open-source frontend library developed and maintained by Facebook. In the MVC architecture, it is responsible for the view layer of our application i.e rendering our user interface and updating the UI whenever the user Reacts or changes the view.
+
+5. What is crossorigin in script tag?
+    The crossorigin attribute provides support for CORS, defining how the element handles cross-   origin requests.  
+
+    Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers that blocks web pages from making requests to a different domain than the one that served the web page. This is done to prevent malicious websites from making requests to our  site on behalf of the user, which could potentially compromise their data or security.
+
+    ```
+        <script
+        src="https://example.com/example-framework.js"
+        crossorigin="anonymous"></script>
+
+        <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
+    ```
+
+     When a web page makes a request to a server, the browser checks the response headers to see if the server has specified that the domain is allowed to make the request. If the domain is not allowed, the browser blocks the request and the server will not receive it.
+
+
+6. What is difference between React and ReactDOM ?
+    As React creates a visual representation of our UI. With the help of React DOM library we can perform DOM manipulation based on that Virtual DOM. With ReactDOM we can write React for native applications. 
+
+7. What is difference between react.development.js and react.production.js files via CDN?
+    
+    The development version contains helper function such as warnings whereas, in production 
+
+    all comments are removed and dont include helper function .
+
+    // If we compare size when we do npm install
+
+    -- During Development
+    react-devleopment.js == 106KB
+    react-dom-devlopment.js == 909KB
+
+    --During production 
+    react.production.js == 16KB
+    react-dom.proudction.js == 119KB
+
+8. What is async and defer?
+    They are boolean attributes which are used around script tags to load the external scripts efficently to our webpage. 
+
+    DEFER - Specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing (only for external scripts)
+
+    ASYNC - Specifies that the script is downloaded in parallel to parsing the page, and executed as soon as it is available (before parsing completes) (only for external scripts)
