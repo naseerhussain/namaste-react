@@ -25,17 +25,11 @@ const buildDynamicCode = (obj, heading) => {
         )
       );
     } else if (typeof obj[key] == "object") {
-        
-      //
-    //   codeObj.push(
-    //     React.createElement("h1", {}, key),
-
-    //   )
+     
         codeObj.push(
             React.createElement(headingType, {}, key),
             ...buildDynamicCode(obj[key], "h3")
         )
-        //buildDynamicCode(obj[key])
     } else {
       //
     }
@@ -81,33 +75,7 @@ let obj = {
   ],
 };
 
-// for (let i=1; i < 5 ; i++)
-//     arr.push (
-//         React.createElement(`h${i}`,{}, "Namaste React !!!")
-//     )
 let codeObj = buildDynamicCode(obj, null);
-
-// for (let key in obj) {
-//   console.log(key);
-//   console.log(obj[key]);
-//   if (Array.isArray(obj[key])) {
-//     let liArr = returnLI(obj[key]);
-//     codeObj.push(
-//       React.createElement("h1", {}, key),
-//       React.createElement(
-//         "li",
-//         {
-//           innerHTML: key,
-//         },
-//         [...liArr]
-//       )
-//     );
-//   } else if (typeof obj[key] == "object") {
-//     //
-//   } else {
-//     //
-//   }
-// }
 
 const container = React.createElement("div", {}, [...codeObj]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
