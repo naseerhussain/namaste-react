@@ -1,0 +1,54 @@
+1. What is `NPM`?   
+    - Node Package Manager. npm is the world's largest software registry.
+
+2. What is `Parcel/Webpack`? Why do we need it?
+    - parcel/webpack is static module bundlers for modern javascript applications. Bundlers runs along with frontend frameworks/libraries to provide the development environemt for the developers, also minifies the files.
+
+3. What is `.parcel-cache` ?
+    - parcel-cache is some kind of space which keep tracks of set of recent changes so that whenever subsequent build happens it take reference from those recent change and does the latest change on top of that.
+
+    Basically it works on difference of the state of changes and due to this feature all subsequent build takes lesser time as compared to initial build because it does lesser work.
+
+    parcel-cache get created as part of build process.
+
+4. What is `npx` ?
+    - npx - npm execute. It builds our app
+        ex: npx parcel index.html
+
+5. What is difference between `dependencies` vs `devDependencies` ?
+    - dev-dependencies : these dependencies are only required while project is in development phase. These dependecies will not be packed in prod version of the build.
+    
+    dependencies: these dependencies will be packed in the prod version of the build.
+
+6. What is Tree Shaking?
+    - Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code. It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+
+7. What is Hot Module Replacement?
+    - HMR is a process carried out by the builders to identfy & adds/removes/exchanges modules while an application is running without a full reload. This can significantly speed up development in a few ways.
+
+8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words
+    -   a. Minify :  minify js/css files - removing spaces, long variable names,function names thus reducing the file size
+        b. Image Optimization : Image optimization increase the website load time. optimizing & also not reducing the image quality.
+        c. File watchers : File watchers are used to identify the changes/modifications on the existing project files.
+        d. HMR : HMR to keep track of module changes in any app.
+        e. Port Number : Check if the port number already used by any other apps & assign new port number.
+        f. Code Cleanup : Unnecessary console.log messages are removed through this process
+
+9. What is `.gitignore`? What should we add and not add into it?
+    - gitignore is a file which keeps track of the files & folders that are not meant to be pushed to the code repository.
+    example : node_modules, .git_ignore, .git 
+
+10. What is the difference between `package.json` and `package-lock.json`?
+    - package.json get generated during npm initialization and package-lock.json keeps information of exact package with version which currently under use in current environment
+
+11. Why should I not modify `package-lock.json`?
+    - package-lock.json actually is large information center which keeps track of package and version and dependency information which is used to run app if that get modified then it will create conflict at server side and produce wrong results.
+
+12. What is `node_modules` ? Is it a good idea to push that on git?
+    - 'node_modules' are the downloaded packages along with all dependecies packages which get generated during npm install. Any npm install command downloads and put packages in node_modules alongwith all depedencies and dues this it becomes very big which should not go to git and that's why it should be placed in .gitignore
+
+13. What is the `dist` folder?
+    - 'dist' folder conatains set of files which is compact version of actualy code files. This get generated during npx command.
+
+14. What is `browserlists`?
+    - 'broswerlists' is the option in package.json which is used to provide information which older version broswer should support out app.
